@@ -6,6 +6,8 @@
 
 $brandColor: rgb(243, 156, 18);
 $greyColor: rgba(255, 255, 255, 0.6);
+$backgroundColor: rgb(42, 50, 58);
+$green: rgb(46, 204, 113);
 $mainMargin: 5.5%;
 body {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -13,7 +15,7 @@ body {
 
 .header {
     position: relative;
-    background-color: rgb(42, 50, 58);
+    background-color: $backgroundColor;
     padding: 0 $mainMargin 120px;
     .tagline {
         display: flex;
@@ -32,12 +34,15 @@ body {
     padding: 1rem 0 2rem;
 }
 
-h1.brand-name {
+.brand-name {
     color: $brandColor;
     font-family: 'Archivo Black', sans-serif;
-    font-size: 2rem;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+h1.brand-name {
+    font-size: 2rem;
     text-align: center;
     position: absolute;
     top: 42%;
@@ -71,6 +76,7 @@ h1.brand-name {
                 color: #fff;
                 padding-bottom: 2px;
                 border-bottom: 1px solid #fff;
+                cursor: pointer;
             }
         }
     }
@@ -81,15 +87,28 @@ h1.brand-name {
     width: 110%;
     height: 130px;
     position: absolute;
-    bottom: -55px;
-    right: -8px;
     z-index: 2;
     background: #fff;
-    transform: rotate(-3deg);
-}
-
-.transform {
-    transform: rotate(180deg);
+    &.corner-1 {
+        bottom: -55px;
+        right: -8px;
+        transform: rotate(-3deg);
+    }
+    &.corner-2 {
+        top: -85px;
+        right: 0px;
+        transform: rotate(4deg);
+    }
+    &.corner-3 {
+        bottom: -70px;
+        right: 0px;
+        transform: rotate(4deg);
+    }
+    &.corner-4 {
+        top: -70px;
+        right: 0px;
+        transform: rotate(-4deg);
+    }
 }
 
 .ostrich-font {
@@ -138,4 +157,204 @@ h1.brand-name {
 
 .closed {
     display: none;
+}
+
+.recipes {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: $mainMargin $mainMargin * 3;
+    .single_recipe {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 4rem;
+        .recipe_desc {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            order: 1;
+        }
+        .recipe_title {
+            margin: 1rem 2rem 1rem 0;
+            &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+        .recipe_info {
+            margin-bottom: 1rem;
+        }
+        .recipe-img {
+            width: 350px;
+            height: 350px;
+            order: 2;
+        }
+        &:nth-child(2n)>.recipe-img {
+            order: 0;
+        }
+    }
+}
+
+.register {
+    position: relative;
+    background-color: $backgroundColor;
+    padding: $mainMargin * 2 $mainMargin * 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .register_info {
+        color: #fff;
+        font-size: 1.6rem;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    button {
+        color: $green;
+        font-size: 1.5rem;
+        background-color: transparent;
+        border: 3px solid $green;
+        border-radius: 30px;
+        padding: .5rem 3rem;
+        &:hover {
+            background-color: $green;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+}
+
+.testimonials {
+    padding: $mainMargin $mainMargin * 3;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    h2 {
+        color: #000;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+    }
+    .comments {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        height: 500px;
+    }
+    .comment {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        .comment__text {
+            font-size: 1rem;
+            color: rgb(42, 50, 58);
+            text-align: start;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid rgb(161, 161, 161);
+        }
+        .comment__author {
+            align-self: flex-end;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2rem;
+            text-align: start;
+            .author__name {
+                color: #000;
+                font-size: 1.2rem;
+            }
+            .author__job {
+                font-size: .9rem;
+                color: rgb(137, 137, 137);
+            }
+            .author__img {
+                width: 45px;
+                height: 45px;
+                background-color: #000;
+                border-radius: 50%;
+                margin-right: 1rem;
+            }
+        }
+    }
+}
+
+.footer {
+    position: relative;
+    background: url('/img/Map.jpg');
+    padding: $mainMargin * 3 $mainMargin * 3 2rem;
+    color: #fff;
+    .footer__content {
+        display: flex;
+        justify-content: space-between;
+        .footer__company {
+            width: 30%;
+            h3 {
+                margin-bottom: 2rem;
+                font-weight: normal;
+            }
+            .company-adress {
+                margin-bottom: 2rem;
+            }
+        }
+        .footer__nav {
+            width: 20%;
+            .nav-list {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                .nav-list__item {
+                    margin: 0;
+                    padding: 0;
+                    &>a {
+                        text-transform: capitalize;
+                        line-height: 1;
+                    }
+                }
+            }
+        }
+        .footer__subscription {
+            width: 40%;
+            .subscription__form-input {
+                position: relative;
+                width: 100%;
+                input {
+                    color: #fff;
+                    width: 100%;
+                    padding: 10px 50px 10px 10px;
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 2px solid rgb(161, 161, 161);
+                    margin-bottom: 1rem;
+                }
+                button {
+                    position: absolute;
+                    top: 35%;
+                    right: 10px;
+                    transform: translateY(-50%);
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    border: none;
+                    background: url('/img/Arrow.png') 50% 50% no-repeat;
+                }
+            }
+            .footer__subscription-rules {
+                text-transform: uppercase;
+                font-size: 1.2rem;
+                font-weight: normal;
+                font-family: 'Cairo', sans-serif;
+            }
+        }
+    }
+    .footer__copy {
+        margin-top: 6rem;
+    }
+}
+
+.green {
+    color: $green;
 }

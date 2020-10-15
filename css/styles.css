@@ -94,12 +94,15 @@ body {
   padding: 1rem 0 2rem;
 }
 
-h1.brand-name {
+.brand-name {
   color: #f39c12;
   font-family: "Archivo Black", sans-serif;
-  font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+h1.brand-name {
+  font-size: 2rem;
   text-align: center;
   position: absolute;
   top: 42%;
@@ -134,6 +137,7 @@ h1.brand-name {
   color: #fff;
   padding-bottom: 2px;
   border-bottom: 1px solid #fff;
+  cursor: pointer;
 }
 
 .corner {
@@ -141,15 +145,28 @@ h1.brand-name {
   width: 110%;
   height: 130px;
   position: absolute;
-  bottom: -55px;
-  right: -8px;
   z-index: 2;
   background: #fff;
+}
+.corner.corner-1 {
+  bottom: -55px;
+  right: -8px;
   transform: rotate(-3deg);
 }
-
-.transform {
-  transform: rotate(180deg);
+.corner.corner-2 {
+  top: -85px;
+  right: 0px;
+  transform: rotate(4deg);
+}
+.corner.corner-3 {
+  bottom: -70px;
+  right: 0px;
+  transform: rotate(4deg);
+}
+.corner.corner-4 {
+  top: -70px;
+  right: 0px;
+  transform: rotate(-4deg);
 }
 
 .ostrich-font {
@@ -196,4 +213,204 @@ h1.brand-name {
 
 .closed {
   display: none;
+}
+
+.recipes {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5.5% 16.5%;
+}
+.recipes .single_recipe {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+.recipes .single_recipe .recipe_desc {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  order: 1;
+}
+.recipes .single_recipe .recipe_title {
+  margin: 1rem 2rem 1rem 0;
+}
+.recipes .single_recipe .recipe_title:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.recipes .single_recipe .recipe_info {
+  margin-bottom: 1rem;
+}
+.recipes .single_recipe .recipe-img {
+  width: 350px;
+  height: 350px;
+  order: 2;
+}
+.recipes .single_recipe:nth-child(2n) > .recipe-img {
+  order: 0;
+}
+
+.register {
+  position: relative;
+  background-color: #2a323a;
+  padding: 11% 16.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.register .register_info {
+  color: #fff;
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.register button {
+  color: #2ecc71;
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: 3px solid #2ecc71;
+  border-radius: 30px;
+  padding: 0.5rem 3rem;
+}
+.register button:hover {
+  background-color: #2ecc71;
+  color: #fff;
+  cursor: pointer;
+}
+
+.testimonials {
+  padding: 5.5% 16.5%;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.testimonials h2 {
+  color: #000;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.testimonials .comments {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  height: 500px;
+}
+.testimonials .comment {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.testimonials .comment .comment__text {
+  font-size: 1rem;
+  color: #2a323a;
+  text-align: start;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid #a1a1a1;
+}
+.testimonials .comment .comment__author {
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  text-align: start;
+}
+.testimonials .comment .comment__author .author__name {
+  color: #000;
+  font-size: 1.2rem;
+}
+.testimonials .comment .comment__author .author__job {
+  font-size: 0.9rem;
+  color: #898989;
+}
+.testimonials .comment .comment__author .author__img {
+  width: 45px;
+  height: 45px;
+  background-color: #000;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.footer {
+  position: relative;
+  background: url("/img/Map.jpg");
+  padding: 16.5% 16.5% 2rem;
+  color: #fff;
+}
+.footer .footer__content {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .footer__content .footer__company {
+  width: 30%;
+}
+.footer .footer__content .footer__company h3 {
+  margin-bottom: 2rem;
+  font-weight: normal;
+}
+.footer .footer__content .footer__company .company-adress {
+  margin-bottom: 2rem;
+}
+.footer .footer__content .footer__nav {
+  width: 20%;
+}
+.footer .footer__content .footer__nav .nav-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.footer .footer__content .footer__nav .nav-list .nav-list__item {
+  margin: 0;
+  padding: 0;
+}
+.footer .footer__content .footer__nav .nav-list .nav-list__item > a {
+  text-transform: capitalize;
+  line-height: 1;
+}
+.footer .footer__content .footer__subscription {
+  width: 40%;
+}
+.footer .footer__content .footer__subscription .subscription__form-input {
+  position: relative;
+  width: 100%;
+}
+.footer .footer__content .footer__subscription .subscription__form-input input {
+  color: #fff;
+  width: 100%;
+  padding: 10px 50px 10px 10px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #a1a1a1;
+  margin-bottom: 1rem;
+}
+.footer .footer__content .footer__subscription .subscription__form-input button {
+  position: absolute;
+  top: 35%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background: url("/img/Arrow.png") 50% 50% no-repeat;
+}
+.footer .footer__content .footer__subscription .footer__subscription-rules {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: normal;
+  font-family: "Cairo", sans-serif;
+}
+.footer .footer__copy {
+  margin-top: 6rem;
+}
+
+.green {
+  color: #2ecc71;
 }
