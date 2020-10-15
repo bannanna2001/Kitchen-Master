@@ -1,2 +1,141 @@
-@import "reset.scss";
-body {}
+@import "reset";
+@font-face {
+    font-family: "OstrichSans";
+    src: url(/fonts/ostrich_sans/OstrichSans-Bold.otf);
+}
+
+$brandColor: rgb(243, 156, 18);
+$greyColor: rgba(255, 255, 255, 0.6);
+$mainMargin: 5.5%;
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.header {
+    position: relative;
+    background-color: rgb(42, 50, 58);
+    padding: 0 $mainMargin 120px;
+    .tagline {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #fff;
+        &>div {
+            display: inline-block;
+            text-align: center;
+        }
+    }
+}
+
+.header-nav {
+    position: relative;
+    padding: 1rem 0 2rem;
+}
+
+h1.brand-name {
+    color: $brandColor;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .nav-list__item {
+        &:nth-child(1) {
+            margin-right: 2rem;
+        }
+        &:nth-child(2) {
+            margin-right: 250px;
+        }
+        &:nth-child(3) {
+            margin-left: 250px;
+            margin-right: 2rem;
+        }
+        &>a {
+            font-size: .9rem;
+            color: $greyColor;
+            font-weight: bold;
+            text-transform: uppercase;
+            line-height: 2.8;
+            text-decoration: none;
+            &:hover {
+                color: #fff;
+                padding-bottom: 2px;
+                border-bottom: 1px solid #fff;
+            }
+        }
+    }
+}
+
+.corner {
+    border-bottom: 1px solid transparent;
+    width: 110%;
+    height: 130px;
+    position: absolute;
+    bottom: -55px;
+    right: -8px;
+    z-index: 2;
+    background: #fff;
+    transform: rotate(-3deg);
+}
+
+.transform {
+    transform: rotate(180deg);
+}
+
+.ostrich-font {
+    font-size: 4rem;
+    font-family: "OstrichSans", sans-serif;
+    font-weight: bold;
+    line-height: 1.2;
+    &.mini {
+        font-size: 2rem;
+    }
+}
+
+.anton-font {
+    font-family: 'Anton', sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    &.big {
+        font-size: 3.5rem;
+    }
+}
+
+.sansita-font {
+    display: flex;
+    align-items: center;
+    font-family: 'Sansita Swashed', cursive;
+    font-size: 2rem;
+    .double-line {
+        &>img {
+            height: auto;
+            padding: 0 10px;
+        }
+    }
+}
+
+.cairo-font {
+    font-size: 4.5rem;
+    font-family: 'Cairo', sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 1;
+}
+
+.closed {
+    display: none;
+}
