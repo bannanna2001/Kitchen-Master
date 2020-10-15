@@ -155,7 +155,7 @@ h1.brand-name {
 }
 .corner.corner-2 {
   top: -85px;
-  right: 0px;
+  right: -10px;
   transform: rotate(4deg);
 }
 .corner.corner-3 {
@@ -248,10 +248,14 @@ h1.brand-name {
 .recipes .single_recipe .recipe-img {
   width: 350px;
   height: 350px;
+  margin-left: 2rem;
+  margin-right: 0;
   order: 2;
 }
 .recipes .single_recipe:nth-child(2n) > .recipe-img {
   order: 0;
+  margin-left: 0;
+  margin-right: 2rem;
 }
 
 .register {
@@ -413,4 +417,260 @@ h1.brand-name {
 
 .green {
   color: #2ecc71;
+}
+
+@media all and (min-width: 120em) {
+  .corner {
+    display: none;
+  }
+}
+@media all and (max-width: 90em) {
+  .footer {
+    padding: 16.5% 5.5% 2rem;
+  }
+  .footer .footer__content .footer__nav {
+    width: 20%;
+  }
+  .footer .footer__content .footer__subscription {
+    width: 50%;
+  }
+}
+@media all and (max-width: 64em) {
+  h1.brand-name {
+    font-size: 2rem;
+    text-align: center;
+    position: relative;
+    margin-top: 2rem;
+  }
+
+  .nav-list .nav-list__item:nth-child(n):not(:last-child) {
+    margin-right: 2rem;
+    margin-left: 0;
+  }
+
+  .recipes {
+    padding: 5.5%;
+  }
+
+  .register {
+    padding: 12.1% 5.5%;
+  }
+  .register .register_info {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
+  .register button {
+    font-size: 1rem;
+    border: 3px solid #2ecc71;
+    border-radius: 30px;
+  }
+
+  .testimonials {
+    padding: 5.5%;
+    position: relative;
+    z-index: 3;
+  }
+  .testimonials h2 {
+    margin-bottom: 3rem;
+  }
+  .testimonials .comments {
+    align-items: center;
+    height: auto;
+  }
+  .testimonials .comment {
+    width: 70%;
+    display: flex;
+    margin-bottom: 4rem;
+    border-bottom: 3px solid #a1a1a1;
+  }
+  .testimonials .comment .comment__text {
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+    border-bottom: none;
+  }
+  .testimonials .comment .comment__author {
+    width: 100%;
+    margin: 0 0 1rem;
+    justify-content: flex-end;
+  }
+
+  .footer .footer__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .footer .footer__content .footer__company {
+    width: 40%;
+    order: 2;
+  }
+  .footer .footer__content .footer__subscription {
+    width: 60%;
+    order: 3;
+  }
+  .footer .footer__content .footer__nav {
+    width: 100%;
+    order: 1;
+    margin-bottom: 3rem;
+  }
+  .footer .footer__content .footer__nav .nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .footer .footer__content .footer__nav .nav-list .nav-list__item {
+    margin: 1rem;
+  }
+  .footer .footer__content .footer__subscription .subscription__form-input input {
+    font-size: 14px;
+  }
+  .footer .footer__content .footer__subscription .footer__subscription-rules {
+    font-size: 14px;
+  }
+  .footer .footer__copy {
+    margin-top: 3rem;
+  }
+}
+@media all and (max-width: 37em) {
+  h1.brand-name {
+    font-size: 1.5rem;
+  }
+
+  .nav-list .nav-list__item:nth-child(n):not(:last-child) {
+    margin-right: 1rem;
+    margin-left: 0;
+  }
+  .nav-list .nav-list__item > a {
+    font-size: 12px;
+    line-height: 2;
+  }
+
+  .header {
+    padding: 0 0 3rem;
+  }
+
+  .corner {
+    display: none;
+  }
+
+  .ostrich-font {
+    font-size: 2rem;
+  }
+  .ostrich-font.mini {
+    font-size: 1rem;
+  }
+
+  .anton-font {
+    font-size: 1.5rem;
+  }
+  .anton-font.big {
+    font-size: 2.5rem;
+  }
+
+  .sansita-font {
+    font-size: 1rem;
+  }
+  .sansita-font .double-line > img {
+    height: auto;
+    padding: 0 10px;
+  }
+
+  .cairo-font {
+    font-size: 2.5rem;
+  }
+
+  .recipes .single_recipe {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem 3rem 1rem;
+    border-bottom: 1px dashed #000;
+  }
+  .recipes .single_recipe .recipe_desc {
+    width: 100%;
+    order: 2;
+    font-size: 12px;
+  }
+  .recipes .single_recipe .recipe_title {
+    font-size: 1.2rem;
+  }
+  .recipes .single_recipe .recipe-img {
+    width: 100%;
+    height: 350px;
+    margin-left: 0;
+    margin-right: 0;
+    order: 1;
+  }
+  .recipes .single_recipe:nth-child(2n) > .recipe-img {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .register {
+    padding: 5.5%;
+  }
+  .register .register_info {
+    font-size: 14px;
+    margin-bottom: 2rem;
+  }
+  .register button {
+    font-size: 12px;
+    border: 1px solid #2ecc71;
+  }
+
+  .testimonials .comment {
+    width: 100%;
+  }
+
+  .footer {
+    padding: 5.5% 5.5% 2rem;
+  }
+  .footer .footer__content {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+  .footer .footer__content .footer__company {
+    width: 100%;
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer .footer__content .footer__company h3 {
+    margin-bottom: 0.5rem;
+  }
+  .footer .footer__content .footer__company .company-adress {
+    margin-bottom: 0.5rem;
+  }
+  .footer .footer__content .footer__subscription {
+    width: 100%;
+    order: 2;
+    margin-bottom: 2rem;
+  }
+  .footer .footer__content .footer__subscription .subscription__form-input input {
+    font-size: 12px;
+  }
+  .footer .footer__content .footer__subscription .footer__subscription-rules {
+    font-size: 12px;
+  }
+  .footer .footer__content .footer__nav {
+    width: 100%;
+    order: 1;
+    margin-bottom: 1rem;
+  }
+  .footer .footer__content .footer__nav .nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer .footer__content .footer__nav .nav-list .nav-list__item {
+    font-size: 12px;
+    margin: 0.5rem;
+  }
+  .footer .footer__copy {
+    margin-top: 3rem;
+    font-size: 10px;
+  }
 }

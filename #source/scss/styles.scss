@@ -96,7 +96,7 @@ h1.brand-name {
     }
     &.corner-2 {
         top: -85px;
-        right: 0px;
+        right: -10px;
         transform: rotate(4deg);
     }
     &.corner-3 {
@@ -190,10 +190,14 @@ h1.brand-name {
         .recipe-img {
             width: 350px;
             height: 350px;
+            margin-left: 2rem;
+            margin-right: 0;
             order: 2;
         }
         &:nth-child(2n)>.recipe-img {
             order: 0;
+            margin-left: 0;
+            margin-right: 2rem;
         }
     }
 }
@@ -357,4 +361,275 @@ h1.brand-name {
 
 .green {
     color: $green;
+}
+
+// 1920px //
+@media all and (min-width: 120em) {
+    .corner {
+        display: none;
+    }
+}
+
+// 1440px //
+@media all and (max-width: 90em) {
+    .footer {
+        padding: $mainMargin * 3 $mainMargin 2rem;
+        .footer__content {
+            .footer__nav {
+                width: 20%;
+            }
+            .footer__subscription {
+                width: 50%;
+            }
+        }
+    }
+}
+
+// 1024px //
+@media all and (max-width: 64em) {
+    h1.brand-name {
+        font-size: 2rem;
+        text-align: center;
+        position: relative;
+        margin-top: 2rem;
+    }
+    .nav-list {
+        .nav-list__item {
+            &:nth-child(n):not(:last-child) {
+                margin-right: 2rem;
+                margin-left: 0;
+            }
+        }
+    }
+    .recipes {
+        padding: $mainMargin;
+    }
+    .register {
+        padding: $mainMargin * 2.2 $mainMargin;
+        .register_info {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+        button {
+            font-size: 1rem;
+            border: 3px solid #2ecc71;
+            border-radius: 30px;
+        }
+    }
+    .testimonials {
+        padding: $mainMargin;
+        position: relative;
+        z-index: 3;
+        h2 {
+            margin-bottom: 3rem;
+        }
+        .comments {
+            align-items: center;
+            height: auto;
+        }
+        .comment {
+            width: 70%;
+            display: flex;
+            margin-bottom: 4rem;
+            border-bottom: 3px solid rgb(161, 161, 161);
+            .comment__text {
+                width: 100%;
+                font-size: 1rem;
+                text-align: center;
+                border-bottom: none;
+            }
+            .comment__author {
+                width: 100%;
+                margin: 0 0 1rem;
+                justify-content: flex-end;
+            }
+        }
+    }
+    .footer {
+        .footer__content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .footer__company {
+                width: 40%;
+                order: 2;
+            }
+            .footer__subscription {
+                width: 60%;
+                order: 3;
+            }
+            .footer__nav {
+                width: 100%;
+                order: 1;
+                margin-bottom: 3rem;
+                .nav-list {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: flex-start;
+                    .nav-list__item {
+                        margin: 1rem;
+                    }
+                }
+            }
+            .footer__subscription {
+                .subscription__form-input {
+                    input {
+                        font-size: 14px;
+                    }
+                }
+                .footer__subscription-rules {
+                    font-size: 14px;
+                }
+            }
+        }
+        .footer__copy {
+            margin-top: 3rem;
+        }
+    }
+}
+
+// 580px //
+@media all and (max-width: 37em) {
+    h1.brand-name {
+        font-size: 1.5rem;
+    }
+    .nav-list {
+        .nav-list__item {
+            &:nth-child(n):not(:last-child) {
+                margin-right: 1rem;
+                margin-left: 0;
+            }
+            &>a {
+                font-size: 12px;
+                line-height: 2;
+            }
+        }
+    }
+    .header {
+        padding: 0 0 3rem;
+    }
+    .corner {
+        display: none;
+    }
+    .ostrich-font {
+        font-size: 2rem;
+        &.mini {
+            font-size: 1rem;
+        }
+    }
+    .anton-font {
+        font-size: 1.5rem;
+        &.big {
+            font-size: 2.5rem;
+        }
+    }
+    .sansita-font {
+        font-size: 1rem;
+        .double-line {
+            &>img {
+                height: auto;
+                padding: 0 10px;
+            }
+        }
+    }
+    .cairo-font {
+        font-size: 2.5rem;
+    }
+    .recipes {
+        .single_recipe {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 1rem 3rem 1rem;
+            border-bottom: 1px dashed #000;
+            .recipe_desc {
+                width: 100%;
+                order: 2;
+                font-size: 12px;
+            }
+            .recipe_title {
+                font-size: 1.2rem;
+            }
+            .recipe-img {
+                width: 100%;
+                height: 350px;
+                margin-left: 0;
+                margin-right: 0;
+                order: 1;
+            }
+            &:nth-child(2n)>.recipe-img {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+    .register {
+        padding: $mainMargin;
+        .register_info {
+            font-size: 14px;
+            margin-bottom: 2rem;
+        }
+        button {
+            font-size: 12px;
+            border: 1px solid #2ecc71;
+        }
+    }
+    .testimonials {
+        .comment {
+            width: 100%;
+        }
+    }
+    .footer {
+        padding: $mainMargin $mainMargin 2rem;
+        .footer__content {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            .footer__company {
+                width: 100%;
+                order: 3;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h3 {
+                    margin-bottom: .5rem;
+                }
+                .company-adress {
+                    margin-bottom: .5rem;
+                }
+            }
+            .footer__subscription {
+                width: 100%;
+                order: 2;
+                margin-bottom: 2rem;
+                .subscription__form-input {
+                    input {
+                        font-size: 12px;
+                    }
+                }
+                .footer__subscription-rules {
+                    font-size: 12px;
+                }
+            }
+            .footer__nav {
+                width: 100%;
+                order: 1;
+                margin-bottom: 1rem;
+                .nav-list {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    .nav-list__item {
+                        font-size: 12px;
+                        margin: .5rem;
+                    }
+                }
+            }
+        }
+        .footer__copy {
+            margin-top: 3rem;
+            font-size: 10px;
+        }
+    }
 }
