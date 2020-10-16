@@ -1,7 +1,7 @@
 @import "reset";
 @font-face {
     font-family: "OstrichSans";
-    src: url(/fonts/ostrich_sans/OstrichSans-Bold.otf);
+    src: url(../fonts/ostrich_sans/OstrichSans-Bold.otf);
 }
 
 $brandColor: rgb(243, 156, 18);
@@ -15,6 +15,7 @@ body {
 
 .header {
     position: relative;
+    overflow: hidden;
     background-color: $backgroundColor;
     padding: 0 $mainMargin 120px;
     .tagline {
@@ -30,6 +31,7 @@ body {
 }
 
 .header-nav {
+    overflow: hidden;
     position: relative;
     padding: 1rem 0 2rem;
 }
@@ -85,6 +87,7 @@ h1.brand-name {
 .corner {
     border-bottom: 1px solid transparent;
     width: 110%;
+    overflow: hidden;
     height: 130px;
     position: absolute;
     z-index: 2;
@@ -161,6 +164,7 @@ h1.brand-name {
 
 .recipes {
     position: relative;
+    overflow: hidden;
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -204,6 +208,7 @@ h1.brand-name {
 
 .register {
     position: relative;
+    overflow: hidden;
     background-color: $backgroundColor;
     padding: $mainMargin * 2 $mainMargin * 3;
     display: flex;
@@ -235,6 +240,7 @@ h1.brand-name {
     padding: $mainMargin $mainMargin * 3;
     text-align: center;
     position: relative;
+    overflow: hidden;
     z-index: 2;
     h2 {
         color: #000;
@@ -287,7 +293,8 @@ h1.brand-name {
 
 .footer {
     position: relative;
-    background: url('/img/Map.jpg');
+    overflow: hidden;
+    background: url('../img/Map.jpg');
     padding: $mainMargin * 3 $mainMargin * 3 2rem;
     color: #fff;
     .footer__content {
@@ -324,6 +331,7 @@ h1.brand-name {
             width: 40%;
             .subscription__form-input {
                 position: relative;
+                overflow: hidden;
                 width: 100%;
                 input {
                     color: #fff;
@@ -343,7 +351,7 @@ h1.brand-name {
                     height: 30px;
                     border-radius: 50%;
                     border: none;
-                    background: url('/img/Arrow.png') 50% 50% no-repeat;
+                    background: url('../img/Arrow.png') 50% 50% no-repeat;
                 }
             }
             .footer__subscription-rules {
@@ -391,6 +399,7 @@ h1.brand-name {
         font-size: 2rem;
         text-align: center;
         position: relative;
+        overflow: hidden;
         margin-top: 2rem;
     }
     .nav-list {
@@ -419,6 +428,7 @@ h1.brand-name {
     .testimonials {
         padding: $mainMargin;
         position: relative;
+        overflow: hidden;
         z-index: 3;
         h2 {
             margin-bottom: 3rem;

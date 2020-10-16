@@ -67,7 +67,7 @@ select {
 }
 @font-face {
   font-family: "OstrichSans";
-  src: url(/fonts/ostrich_sans/OstrichSans-Bold.otf);
+  src: url(../fonts/ostrich_sans/OstrichSans-Bold.otf);
 }
 body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -75,6 +75,7 @@ body {
 
 .header {
   position: relative;
+  overflow: hidden;
   background-color: #2a323a;
   padding: 0 5.5% 120px;
 }
@@ -90,6 +91,7 @@ body {
 }
 
 .header-nav {
+  overflow: hidden;
   position: relative;
   padding: 1rem 0 2rem;
 }
@@ -143,6 +145,7 @@ h1.brand-name {
 .corner {
   border-bottom: 1px solid transparent;
   width: 110%;
+  overflow: hidden;
   height: 130px;
   position: absolute;
   z-index: 2;
@@ -217,6 +220,7 @@ h1.brand-name {
 
 .recipes {
   position: relative;
+  overflow: hidden;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -260,6 +264,7 @@ h1.brand-name {
 
 .register {
   position: relative;
+  overflow: hidden;
   background-color: #2a323a;
   padding: 11% 16.5%;
   display: flex;
@@ -291,6 +296,7 @@ h1.brand-name {
   padding: 5.5% 16.5%;
   text-align: center;
   position: relative;
+  overflow: hidden;
   z-index: 2;
 }
 .testimonials h2 {
@@ -343,7 +349,8 @@ h1.brand-name {
 
 .footer {
   position: relative;
-  background: url("/img/Map.jpg");
+  overflow: hidden;
+  background: url("../img/Map.jpg");
   padding: 16.5% 16.5% 2rem;
   color: #fff;
 }
@@ -383,6 +390,7 @@ h1.brand-name {
 }
 .footer .footer__content .footer__subscription .subscription__form-input {
   position: relative;
+  overflow: hidden;
   width: 100%;
 }
 .footer .footer__content .footer__subscription .subscription__form-input input {
@@ -403,7 +411,7 @@ h1.brand-name {
   height: 30px;
   border-radius: 50%;
   border: none;
-  background: url("/img/Arrow.png") 50% 50% no-repeat;
+  background: url("../img/Arrow.png") 50% 50% no-repeat;
 }
 .footer .footer__content .footer__subscription .footer__subscription-rules {
   text-transform: uppercase;
@@ -440,6 +448,7 @@ h1.brand-name {
     font-size: 2rem;
     text-align: center;
     position: relative;
+    overflow: hidden;
     margin-top: 2rem;
   }
 
@@ -468,6 +477,7 @@ h1.brand-name {
   .testimonials {
     padding: 5.5%;
     position: relative;
+    overflow: hidden;
     z-index: 3;
   }
   .testimonials h2 {
